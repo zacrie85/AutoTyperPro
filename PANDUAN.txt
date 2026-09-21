@@ -1,11 +1,23 @@
 ==========================================================
-  AUTO TYPER PRO v1.0  -  PANDUAN LENGKAP (Bahasa Indonesia)
+  AUTO TYPER PRO v1.2  -  PANDUAN LENGKAP (Bahasa Indonesia)
 ==========================================================
+
+APA YANG BARU DI v1.2?
+----------------------
+- Menu TARGET sekarang mendukung BANYAK TARGET (multi-target)!
+- Kamu bisa MENAMBAH target klik baru kapan saja.
+- Setiap target punya PENGATURAN DETIK SENDIRI (jeda setelah
+  target itu diproses).
+- Setiap target bisa diatur: ketik teks atau klik saja,
+  tekan Enter atau tidak.
+- Urutan target bisa diatur (NAIK / TURUN).
+- Kembali memakai versi Python yang stabil (versi AutoHotkey
+  v1.1 dihentikan karena ada error).
 
 APA ITU APLIKASI INI?
 ---------------------
 Auto Typer Pro adalah aplikasi desktop untuk MENGETIK secara
-OTOMatis ke aplikasi lain (browser, Notepad, YouTube Studio,
+OTOMATIS ke aplikasi lain (browser, Notepad, YouTube Studio,
 Excel, form apa saja) dengan pola:
 
     TEKS UTAMA + NOMOR YANG NAIK TERUS
@@ -48,32 +60,69 @@ Setelah jadi .exe, aplikasi bisa dibuka TANPA install Python.
 3. File .exe ada di folder:  dist\AutoTyperPro.exe
 4. Salin AutoTyperPro.exe ke desktop mana pun. Selesai!
 
-Catatan:
-- File .exe hanya perlu dibuat SATU KALI.
-- Antivirus kadang curiga pada file buatan PyInstaller.
-  Itu FALSE ALARM; silakan pilih "Izinkan / Allow" jika
-  muncul peringatan.
+==========================================================
+CARA PAKAI - MODE BIASA (1 KOLOM TUJUAN)
+==========================================================
+Kalau daftar TARGET dibiarkan KOSONG, aplikasi bekerja seperti
+versi sebelumnya: mengetik ke aplikasi yang sedang fokus.
+
+1. Isi TEKS UTAMA:  dadang film part
+2. Isi NOMOR AWAL:  3
+3. Klik/fokuskan kolom tujuan di aplikasi lain.
+4. Tekan F6 -> selama hitungan mundur, klik kolom tujuan.
+5. Aplikasi mengetik otomatis: part 3, part 4, part 5, ...
+6. Tekan F7 untuk berhenti.
 
 ==========================================================
-CARA PAKAI (LANGKAH DEMI LANGKAH)
+CARA PAKAI - MODE MULTI-TARGET (BARU!)
 ==========================================================
-Contoh kasus: mengetik "dadang film part 3", lalu 4, 5, 6...
+Kalau daftar TARGET DIISI, aplikasi akan mengklik setiap
+target secara berurutan lalu mengetik di sana.
 
-1. Buka aplikasi Auto Typer Pro.
-2. Kolom TEKS UTAMA, isi:  dadang film part
-   (boleh diberi spasi di akhir, aplikasi juga otomatis
-    menambahkan spasi sebelum nomor)
-3. Kolom NOMOR AWAL, isi:  3
-4. Klik/fokuskan dulu kolom tujuan di aplikasi lain
-   (misal kotak komentar YouTube, Notepad, dll).
-5. Tekan tombol F6 pada keyboard.
-6. Selama hitungan mundur (5 detik), buruan klik kolom
-   tujuan supaya kursor teks berada di sana.
-7. Aplikasi mulai mengetik otomatis:
-      dadang film part 3
-      dadang film part 4
-      dadang film part 5  ... dan seterusnya.
-8. Ingin berhenti? Tekan F7 (atau tombol ESC).
+CONTOH: kamu punya 2 target, "Kotak Judul" (jeda 2 dtk) dan
+"Tombol Kirim" (klik saja, jeda 1 dtk). Setiap putaran:
+    1. Klik Kotak Judul -> ketik "dadang film part 3"
+       -> tunggu 2 detik
+    2. Klik Tombol Kirim -> tidak mengetik, hanya klik
+       -> tunggu 1 detik
+    3. Putaran berikutnya: "dadang film part 4" ... dst.
+
+LANGKAH MENAMBAH TARGET:
+1. Tekan tombol  + TAMBAH TARGET.
+2. Muncul jendela "TAMBAH TARGET BARU" berisi:
+   - NAMA TARGET      : nama bebas, mis. "Kotak Judul"
+   - POSISI X dan Y   : klik tombol AMBIL POSISI, lalu
+                        arahkan mouse ke titik yang mau
+                        diklik dan DIAMKAN 5 detik. Angka
+                        X,Y otomatis terisi. (Boleh juga
+                        mengetik angkanya manual.)
+   - JEDA SETELAH TARGET INI (detik)  : mis. 2.0
+                        = berapa lama menunggu setelah
+                        target ini selesai diproses.
+   - Ketik teks di target ini  : centang bila di target
+                        ini perlu MENGETIK. Matikan bila
+                        hanya ingin MENGKLIK (mis. tombol
+                        unggah/kirim).
+   - Enter setelah mengetik    : centang bila perlu
+                        menekan Enter setelah mengetik.
+3. Tekan SIMPAN. Target masuk ke daftar.
+4. Ulangi untuk menambah target lain (tidak ada batas).
+
+MENGATUR DAFTAR TARGET:
+- EDIT  : pilih target di daftar (klik sekali), lalu tekan
+          EDIT. Klik dua kali pada baris target juga bisa.
+- HAPUS : pilih target lalu tekan HAPUS.
+- NAIK / TURUN : menggeser urutan target. Aplikasi memproses
+          target dari atas ke bawah.
+
+OPSI "NOMOR NAIK TIAP SELESAI MENGETIK":
+- Dicentang (bawaan): setiap selesai mengetik di sebuah
+  target, nomor langsung naik. Contoh 2 target:
+  target1 = part 3, target2 = part 4, target1 = part 5, ...
+- Tidak dicentang: semua target dalam satu putaran memakai
+  nomor yang sama, nomor naik setiap putaran. Contoh:
+  target1 = part 3, target2 = part 3, lalu putaran berikut
+  part 4, part 4, ...
 
 ==========================================================
 PENJELASAN TIAP KOLOM
@@ -83,27 +132,19 @@ PENJELASAN TIAP KOLOM
 - NAIK TIAP KALI      : berapa kenaikan nomornya.
                         Isi 1 = 3,4,5,6... ; isi 10 = 3,13,23...
 - TEKS TAMBAHAN       : tulisan setelah nomor (boleh kosong).
-                        Contoh isi " - HD" hasilnya:
-                        "dadang film part 3 - HD"
 - Spasi otomatis      : memberi spasi antara teks dan nomor.
-                        Matikan centangnya jika tidak mau.
-- JEDA (detik)        : jarak waktu antar pengiriman.
-                        Minimal 0.1 disarankan 1-3 detik.
+- JEDA (detik)        : dipakai pada mode biasa (daftar target
+                        kosong) sebagai jarak antar pengiriman,
+                        dan pada mode multi-target sebagai jeda
+                        antar putaran bila jeda target terakhir 0.
 - BATAS KIRIM         : 0 = tanpa batas (sampai F7 ditekan).
-                        Isi 50 = berhenti sendiri setelah 50x.
-- MUNDUR (detik)      : hitungan mundur sebelum mulai,
-                        supaya kamu sempat klik kolom tujuan.
-- Enter otomatis      : menekan Enter setiap selesai mengetik
-                        (berguna untuk kirim komentar satu
-                        per satu).
-- TARGET:
-  * "Ketik ke aplikasi yang sedang fokus" -> app mengetik
-    ke kolom yang sedang aktif/kamu klik terakhir.
-  * "Klik posisi layar tertentu dulu" -> app mengklik
-    otomatis satu titik di layar, lalu mengetik.
-    Caranya: tekan AMBIL POSISI, arahkan mouse ke titik
-    yang dimau (misal kotak input), diamkan 5 detik.
-    Koordinat X,Y otomatis terisi.
+                        Isi 50 = berhenti sendiri setelah 50
+                        ketikan.
+- MUNDUR (detik)      : hitungan mundur sebelum mulai.
+- Enter otomatis      : dipakai pada mode biasa saja; pada
+                        multi-target, Enter diatur per target.
+- TARGET (urutan klik): daftar titik klik + pengaturannya.
+                        Kosong = mode biasa.
 
 ==========================================================
 HOTKEY
@@ -114,14 +155,13 @@ F7  = BERHENTI (ESC juga bisa)
 ==========================================================
 TIPS PENTING
 ==========================================================
-- Laptop: kadang F6/F7 harus ditekan bersama tombol Fn
-  (Fn + F6). Kalau hotkey tak merespons, coba ini.
-- Kalau nomor kacau / dobel: naikkan JEDA jadi 2-3 detik.
-- Aplikasi game dengan anti-cheat bisa memblokir input
-  otomatis; gunakan pada aplikasi biasa (browser, Office).
-- Pengaturanmu otomatis tersimpan di file
-  auto_typer_settings.json di folder yang sama, jadi
-  besok buka lagi tinggal tekan F6.
+- Laptop: kadang F6/F7 harus ditekan bersama tombol Fn.
+- Kalau nomor kacau / dobel: naikkan JEDA / jeda target.
+- Posisi target tergantung posisi jendela aplikasi. Kalau
+  jendela aplikasinya dipindah, ambil ulang posisinya (EDIT
+  target -> AMBIL POSISI).
+- Pengaturan (termasuk daftar target) tersimpan otomatis di
+  auto_typer_settings.json di folder yang sama.
 
 ==========================================================
 TROUBLESHOOTING
@@ -131,16 +171,17 @@ Masalah: "pynput belum terpasang"
      Atau pakai JALANKAN.bat yang otomatis memasangnya.
 
 Masalah: python tidak dikenali saat klik file .bat
-  -> Python belum terpasang / lupa centang
-     "Add Python to PATH". Install ulang Python dan
-     JANGAN lupa mencentang pilihan itu.
+  -> Install ulang Python, CENTANG "Add Python to PATH".
 
 Masalah: hotkey F6 tidak bereaksi
   -> Coba Fn + F6, atau klik tombol MULAI di jendela app.
 
 Masalah: teks masuk ke tempat yang salah
-  -> Pastikan kamu mengklik kolom tujuan SELAMA hitungan
-     mundur, atau pakai mode "Klik posisi layar tertentu".
+  -> Mode biasa: pastikan kamu mengklik kolom tujuan SELAMA
+     hitungan mundur.
+     Mode multi-target: periksa kembali posisi X,Y target
+     (EDIT target) dan pastikan jendela aplikasi tidak
+     dipindah-pindah.
 
 ==========================================================
 SELAMAT MENCOBA! DIBUAT DENGAN PYTHON + TKINTER + PYNPUT.

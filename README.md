@@ -14,15 +14,19 @@ dadang film part 5
 ## Fitur
 
 - Dua kolom inti: **teks utama** (tetap) + **nomor awal** (naik otomatis, langkah bisa diatur)
+- **Multi-target (baru di v1.2)**: tambahkan banyak titik klik, setiap target punya pengaturan sendiri:
+  - Nama target bebas
+  - Posisi X,Y (bisa diambil otomatis lewat tombol AMBIL POSISI)
+  - Jeda detik per target
+  - Ketik teks atau hanya klik (mis. untuk tombol kirim)
+  - Enter otomatis per target
+  - Urutan bisa diatur (NAIK/TURUN), bisa diedit/dihapus
 - Hotkey global: **F6 = mulai**, **F7 / ESC = berhenti**
 - Hitungan mundur sebelum mulai, supaya sempat fokus ke kolom tujuan
 - Jeda antar pengiriman (anti spam) + batas pengiriman (0 = tanpa batas)
-- Enter otomatis setelah tiap pengiriman (opsional)
-- Dua mode target:
-  - Ketik ke aplikasi yang sedang fokus
-  - Klik posisi layar tertentu dulu (koordinat bisa diambil otomatis), lalu ketik
+- Enter otomatis setelah tiap pengiriman (opsional, mode biasa)
 - Pratinjau teks live sebelum dikirim
-- Pengaturan tersimpan otomatis (`auto_typer_settings.json`)
+- Pengaturan + daftar target tersimpan otomatis (`auto_typer_settings.json`)
 - Tampilan dark neon, bahasa antarmuka Indonesia
 
 ## Cara Pakai Cepat
@@ -39,15 +43,15 @@ Setelah jadi `.exe`, aplikasi bisa dijalankan tanpa install Python.
 
 Panduan lengkap: lihat `PANDUAN.txt`.
 
-## Versi AutoHotkey + Portable (Tanpa Install)
+## Mode Multi-Target (Baru di v1.2)
 
-Tersedia juga **versi AutoHotkey v2** dalam paket **portable** — interpreter AutoHotkey resmi (v2.0.28) sudah ikut di dalam paket, jadi **tidak perlu meng-install apa pun** dan bisa dijalankan dari flashdisk di komputer mana pun.
+Isi daftar TARGET dan aplikasi akan mengklik setiap titik secara berurutan lalu mengetik di sana — cocok untuk mengisi beberapa kolom sekaligus atau mengklik tombol kirim secara otomatis. Daftar target kosong = perilaku lama (mengetik ke aplikasi yang sedang fokus).
 
-- `auto_typer.ahk` — script AutoHotkey v2 (fitur sama lengkap: F6 mulai, F7/ESC berhenti)
-- `JALANKAN-PORTABLE.bat` — launcher portable (paket ZIP di halaman Releases)
-- `PANDUAN-AHK.txt` — panduan lengkap versi AutoHotkey
+Detail langkah demi langkah ada di `PANDUAN.txt`, bagian *MODE MULTI-TARGET*.
 
-Paket portable siap pakai: unduh `AutoTyperPro-AHK-Portable-v1.1.zip` di halaman [Releases](https://github.com/zacrie85/AutoTyperPro/releases).
+## Catatan Versi AutoHotkey
+
+Versi AutoHotkey (rilis v1.1) **dihentikan** karena ditemukan error saat dipakai. Aset lama masih tersedia di [Release v1.1](https://github.com/zacrie85/AutoTyperPro/releases/tag/v1.1) untuk referensi, namun pengembangan kembali fokus ke versi Python yang stabil.
 
 ## Struktur Proyek
 
