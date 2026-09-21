@@ -4,3 +4,6 @@ auto_typer_settings.json
 dist/
 build/
 *.spec
+AutoHotkey64.exe
+license-autohotkey.txt
+auto_typer_ahk.ini

@@ -1,0 +1,114 @@
+==========================================================
+  AUTO TYPER PRO - VERSI AUTOHOTKEY + PORTABLE
+  PANDUAN LENGKAP (Bahasa Indonesia)
+==========================================================
+
+APA YANG ADA DI PAKET INI?
+--------------------------
+1. auto_typer.ahk         -> program utama (script AutoHotkey v2)
+2. AutoHotkey64.exe       -> interpreter AutoHotkey v2.0.28 PORTABLE
+                             resmi dari autohotkey.com (tidak perlu
+                             di-install, cukup ikut dalam folder)
+3. JALANKAN-PORTABLE.bat  -> klik 2x untuk langsung memakai aplikasi
+4. PANDUAN-AHK.txt        -> file yang sedang kamu baca
+5. license-autohotkey.txt -> lisensi resmi AutoHotkey (GPL v2)
+
+APA ISTIMEWANYA VERSI PORTABLE INI?
+-----------------------------------
+- TIDAK PERLU INSTALL APA PUN. Tanpa Python, tanpa AutoHotkey,
+  tanpa setup. Cukup:
+     1. Ekstrak ZIP ini ke folder mana saja (mis. Desktop,
+        flashdisk, drive portabel).
+     2. Klik dua kali  JALANKAN-PORTABLE.bat
+     3. Aplikasi langsung terbuka!
+- Bisa dibawa jalan (portable): simpan di flashdisk, jalankan
+  di komputer mana pun tanpa meninggalkan jejak instalasi.
+- Pengaturan tersimpan di auto_typer_ahk.ini di folder yang
+  sama, jadi ikut terbawa bersama flashdisk.
+
+==========================================================
+CARA PAKAI (LANGKAH DEMI LANGKAH)
+==========================================================
+Contoh kasus: mengetik "dadang film part 3", lalu 4, 5, 6...
+
+1. Klik dua kali  JALANKAN-PORTABLE.bat
+2. Kolom TEKS UTAMA, isi:  dadang film part
+3. Kolom NOMOR AWAL, isi:  3
+4. Klik/fokuskan dulu kolom tujuan di aplikasi lain
+   (kotak komentar YouTube, Notepad, Excel, dll).
+5. Tekan  F6  pada keyboard.
+6. Selama hitungan mundur 5 detik, buruan klik kolom tujuan.
+7. Aplikasi mulai mengetik otomatis:
+      dadang film part 3
+      dadang film part 4
+      dadang film part 5  ... dan seterusnya.
+8. Ingin berhenti? Tekan  F7  (atau tombol ESC).
+
+==========================================================
+FITUR (SAMA LENGKAP DENGAN VERSI PYTHON)
+==========================================================
+- TEKS UTAMA + NOMOR AWAL yang naik terus (langkah naik bisa
+  diatur: isi 1 = 3,4,5,... isi 10 = 3,13,23,...)
+- TEKS TAMBAHAN setelah nomor (opsional), contoh isi " HD"
+  hasilnya: "dadang film part 3 HD"
+- Spasi otomatis sebelum nomor (bisa dimatikan)
+- JEDA antar pengiriman (minimal 0.1 detik, saran 1-3 detik)
+- BATAS KIRIM (0 = tanpa batas, 50 = berhenti sendiri 50x)
+- MUNDUR = hitungan mundur sebelum mulai (0-60 detik)
+- Enter otomatis setelah tiap pengiriman (opsional)
+- 2 mode target:
+  * Ketik ke aplikasi yang sedang fokus
+  * Klik posisi layar tertentu dulu lalu ketik
+    (tekan AMBIL POSISI, arahkan mouse, diamkan 5 detik)
+- Pratinjau teks live di jendela aplikasi
+- Tampilan dark neon, bahasa Indonesia
+
+==========================================================
+HOTKEY
+==========================================================
+F6  = MULAI
+F7  = BERHENTI   (ESC juga bisa)
+
+==========================================================
+CARA EDIT / MODIFIKASI SENDIRI
+==========================================================
+Script auto_typer.ahk adalah file teks biasa. Klik kanan ->
+Edit (atau buka dengan Notepad) untuk mengubah-ubah sendiri:
+warna, teks bawaan, atau menambah fitur. Simpan, lalu jalankan
+lagi. Sederhana dan transparan!
+
+==========================================================
+TROUBLESHOOTING
+==========================================================
+Muncul "Windows protected your PC" (SmartScreen)?
+  -> Klik "More info" lalu "Run anyway". Ini normal untuk
+     script yang tidak punya sertifikat digital.
+
+Muncul peringatan antivirus?
+  -> Script .ahk terbuka (bisa dibaca isinya) sehingga aman;
+     pilih "Izinkan / Allow" bila diminta.
+
+Tombol F6 tidak bereaksi?
+  -> Di laptop, coba tekan  Fn + F6.  Atau klik tombol
+     MULAI (F6) langsung di jendela aplikasi.
+
+Teks masuk ke tempat yang salah?
+  -> Pastikan kamu mengklik kolom tujuan SELAMA hitungan
+     mundur 5 detik, atau gunakan mode "Klik posisi layar
+     tertentu dulu" dengan AMBIL POSISI.
+
+Jendela ingin dibuka lagi setelah ditutup?
+  -> Klik lagi JALANKAN-PORTABLE.bat. Pengaturan terakhir
+     otomatis dimuat kembali.
+
+Ingin versi Python (bukan AutoHotkey)?
+  -> Lihat paket AutoTyperPro di repository GitHub ini.
+
+==========================================================
+SUMBER RESMI
+==========================================================
+- AutoHotkey: https://www.autohotkey.com
+- Interpreter portable v2.0.28 resmi (tersertifikasi
+  Microsoft, sumber: GitHub resmi AutoHotkey)
+- Auto Typer Pro: https://github.com/zacrie85/AutoTyperPro
+==========================================================

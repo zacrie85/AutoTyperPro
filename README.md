@@ -39,6 +39,16 @@ Setelah jadi `.exe`, aplikasi bisa dijalankan tanpa install Python.
 
 Panduan lengkap: lihat `PANDUAN.txt`.
 
+## Versi AutoHotkey + Portable (Tanpa Install)
+
+Tersedia juga **versi AutoHotkey v2** dalam paket **portable** — interpreter AutoHotkey resmi (v2.0.28) sudah ikut di dalam paket, jadi **tidak perlu meng-install apa pun** dan bisa dijalankan dari flashdisk di komputer mana pun.
+
+- `auto_typer.ahk` — script AutoHotkey v2 (fitur sama lengkap: F6 mulai, F7/ESC berhenti)
+- `JALANKAN-PORTABLE.bat` — launcher portable (paket ZIP di halaman Releases)
+- `PANDUAN-AHK.txt` — panduan lengkap versi AutoHotkey
+
+Paket portable siap pakai: unduh `AutoTyperPro-AHK-Portable-v1.1.zip` di halaman [Releases](https://github.com/zacrie85/AutoTyperPro/releases).
+
 ## Struktur Proyek
 
 ```
