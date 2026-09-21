@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+auto_typer_settings.json
+dist/
+build/
+*.spec

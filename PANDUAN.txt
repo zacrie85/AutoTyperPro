@@ -1,0 +1,147 @@
+==========================================================
+  AUTO TYPER PRO v1.0  -  PANDUAN LENGKAP (Bahasa Indonesia)
+==========================================================
+
+APA ITU APLIKASI INI?
+---------------------
+Auto Typer Pro adalah aplikasi desktop untuk MENGETIK secara
+OTOMatis ke aplikasi lain (browser, Notepad, YouTube Studio,
+Excel, form apa saja) dengan pola:
+
+    TEKS UTAMA + NOMOR YANG NAIK TERUS
+
+Contoh:
+    Teks utama : dadang film part
+    Nomor awal : 3
+    Hasil      : dadang film part 3
+                 dadang film part 4
+                 dadang film part 5
+                 ... dst, naik terus sampai kamu tekan F7
+
+==========================================================
+ISI PAKET
+==========================================================
+1. auto_typer.py      -> program utama aplikasi
+2. JALANKAN.bat       -> klik 2x untuk langsung memakai app
+                         (butuh Python gratis terpasang)
+3. build_exe.bat      -> klik 2x untuk membuat file .exe
+4. requirements.txt   -> daftar library yang dibutuhkan
+5. PANDUAN.txt        -> file yang sedang kamu baca
+
+==========================================================
+CARA PALING CEPAT (TANPA PERLU JADI EXE)
+==========================================================
+Syarat: Python sudah terpasang (gratis, 60 detik).
+
+1. Download & install Python di https://www.python.org/downloads/
+   PENTING: saat instalasi, CENTANG "Add Python to PATH"!
+2. Klik dua kali file  JALANKAN.bat
+3. Aplikasi langsung terbuka. Selesai!
+
+==========================================================
+CARA MENJADI FILE .EXE (STANDALONE)
+==========================================================
+Setelah jadi .exe, aplikasi bisa dibuka TANPA install Python.
+
+1. Klik dua kali file  build_exe.bat
+2. Tunggu 1-3 menit sampai muncul tulisan "BERHASIL!"
+3. File .exe ada di folder:  dist\AutoTyperPro.exe
+4. Salin AutoTyperPro.exe ke desktop mana pun. Selesai!
+
+Catatan:
+- File .exe hanya perlu dibuat SATU KALI.
+- Antivirus kadang curiga pada file buatan PyInstaller.
+  Itu FALSE ALARM; silakan pilih "Izinkan / Allow" jika
+  muncul peringatan.
+
+==========================================================
+CARA PAKAI (LANGKAH DEMI LANGKAH)
+==========================================================
+Contoh kasus: mengetik "dadang film part 3", lalu 4, 5, 6...
+
+1. Buka aplikasi Auto Typer Pro.
+2. Kolom TEKS UTAMA, isi:  dadang film part
+   (boleh diberi spasi di akhir, aplikasi juga otomatis
+    menambahkan spasi sebelum nomor)
+3. Kolom NOMOR AWAL, isi:  3
+4. Klik/fokuskan dulu kolom tujuan di aplikasi lain
+   (misal kotak komentar YouTube, Notepad, dll).
+5. Tekan tombol F6 pada keyboard.
+6. Selama hitungan mundur (5 detik), buruan klik kolom
+   tujuan supaya kursor teks berada di sana.
+7. Aplikasi mulai mengetik otomatis:
+      dadang film part 3
+      dadang film part 4
+      dadang film part 5  ... dan seterusnya.
+8. Ingin berhenti? Tekan F7 (atau tombol ESC).
+
+==========================================================
+PENJELASAN TIAP KOLOM
+==========================================================
+- TEKS UTAMA          : bagian tulisan yang selalu tetap.
+- NOMOR AWAL          : nomor pertama yang diketik.
+- NAIK TIAP KALI      : berapa kenaikan nomornya.
+                        Isi 1 = 3,4,5,6... ; isi 10 = 3,13,23...
+- TEKS TAMBAHAN       : tulisan setelah nomor (boleh kosong).
+                        Contoh isi " - HD" hasilnya:
+                        "dadang film part 3 - HD"
+- Spasi otomatis      : memberi spasi antara teks dan nomor.
+                        Matikan centangnya jika tidak mau.
+- JEDA (detik)        : jarak waktu antar pengiriman.
+                        Minimal 0.1 disarankan 1-3 detik.
+- BATAS KIRIM         : 0 = tanpa batas (sampai F7 ditekan).
+                        Isi 50 = berhenti sendiri setelah 50x.
+- MUNDUR (detik)      : hitungan mundur sebelum mulai,
+                        supaya kamu sempat klik kolom tujuan.
+- Enter otomatis      : menekan Enter setiap selesai mengetik
+                        (berguna untuk kirim komentar satu
+                        per satu).
+- TARGET:
+  * "Ketik ke aplikasi yang sedang fokus" -> app mengetik
+    ke kolom yang sedang aktif/kamu klik terakhir.
+  * "Klik posisi layar tertentu dulu" -> app mengklik
+    otomatis satu titik di layar, lalu mengetik.
+    Caranya: tekan AMBIL POSISI, arahkan mouse ke titik
+    yang dimau (misal kotak input), diamkan 5 detik.
+    Koordinat X,Y otomatis terisi.
+
+==========================================================
+HOTKEY
+==========================================================
+F6  = MULAI
+F7  = BERHENTI (ESC juga bisa)
+
+==========================================================
+TIPS PENTING
+==========================================================
+- Laptop: kadang F6/F7 harus ditekan bersama tombol Fn
+  (Fn + F6). Kalau hotkey tak merespons, coba ini.
+- Kalau nomor kacau / dobel: naikkan JEDA jadi 2-3 detik.
+- Aplikasi game dengan anti-cheat bisa memblokir input
+  otomatis; gunakan pada aplikasi biasa (browser, Office).
+- Pengaturanmu otomatis tersimpan di file
+  auto_typer_settings.json di folder yang sama, jadi
+  besok buka lagi tinggal tekan F6.
+
+==========================================================
+TROUBLESHOOTING
+==========================================================
+Masalah: "pynput belum terpasang"
+  -> Buka CMD, jalankan:  pip install pynput
+     Atau pakai JALANKAN.bat yang otomatis memasangnya.
+
+Masalah: python tidak dikenali saat klik file .bat
+  -> Python belum terpasang / lupa centang
+     "Add Python to PATH". Install ulang Python dan
+     JANGAN lupa mencentang pilihan itu.
+
+Masalah: hotkey F6 tidak bereaksi
+  -> Coba Fn + F6, atau klik tombol MULAI di jendela app.
+
+Masalah: teks masuk ke tempat yang salah
+  -> Pastikan kamu mengklik kolom tujuan SELAMA hitungan
+     mundur, atau pakai mode "Klik posisi layar tertentu".
+
+==========================================================
+SELAMAT MENCOBA! DIBUAT DENGAN PYTHON + TKINTER + PYNPUT.
+==========================================================

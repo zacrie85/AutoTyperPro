@@ -1,0 +1,5 @@
+# Library yang dibutuhkan Auto Typer Pro
+pynput>=1.7.6
+
+# Hanya untuk membuat file .exe (opsional)
+pyinstaller>=6.0.0
